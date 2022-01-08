@@ -13,3 +13,13 @@ $.ajax({
         $("#header").html(result);
     }
 });
+
+$.ajax({
+    url: "./footer/footer.html",
+    data: {
+        zipcode: 97201
+    },
+    success: function (result) {
+        $("#foot").html(result);
+    }
+});
