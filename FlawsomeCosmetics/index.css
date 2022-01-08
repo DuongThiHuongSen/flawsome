@@ -6,6 +6,7 @@
 @import url('CSS/StyleBlog.css');
 @import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 @import url('https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css');
+@import url('CSS/StyleTrangSanPham.css');
 
 .fixed{
     width: 100%;
