@@ -1,7 +1,8 @@
 .container-footer{
-    height: 400px;
+    min-height: 400px;
     background-color: #F0F7D4;
     width: 100%;
+    margin: 0;
 }
 
 .logo-2{
@@ -12,7 +13,7 @@
 
 .bg-green{
     background-image: url('../Images/footer/bg.png');
-    height: 100%;
+    /* height: 100%; */
     width: 100%;
     background-color: blue;
 }

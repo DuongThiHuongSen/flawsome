@@ -9,7 +9,10 @@
 }
 
 .image {
-  flex-basis: 100%;
+  /* flex-basis: 100%; */
+ margin-bottom: 20px;
+ margin-top: 20px;
+ padding: 16px;
 }
 
 @font-face {
@@ -49,7 +52,7 @@
 /*    Phần member*/
 .member {
   background-color: rgba(79, 105, 61, 1);
-  padding: 40px 20px;
+  padding: 20px 20px;
   margin-bottom: 100px;
 }
 .member h1 {
@@ -75,12 +78,15 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 40px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .info-member img {
   height: 250px;
   width: 250px;
-  margin-bottom: 20px;
+  margin: auto;
 }
 .info-member h3 {
   font-family: AthiliFont;
@@ -92,4 +98,5 @@
   text-align: center;
   color: rgba(255, 255, 255, 1);
   margin-bottom: 20px;
+  margin-top: 20px;
 }

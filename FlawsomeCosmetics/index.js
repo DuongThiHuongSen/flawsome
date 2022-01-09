@@ -24,6 +24,7 @@ $.ajax({
 });
 
 window.addEventListener('DOMContentLoaded', () => {
+
     const sanPhamNoiBat = data.map((item, index) => {
         let star = '';
         for (let index = 0; index < 5; index++) {
@@ -33,15 +34,23 @@ window.addEventListener('DOMContentLoaded', () => {
                 star += `<i class="fa fa-star-o" aria-hidden="true"></i> `;
             }
         }
-        return `<div class="col-3">
+        return `<div class="col-3" >
+                        <a href="TrangChiTietSanPham.html?id=${item.id}">
                         <img src='${item.image}' />
-                        <h4>
+                        
+                        <h4 class="py-2">
                             ${item.name}
                         </h4>
-                        <div class="rating">
-                            ${star}
+                        <div class="flex justify-content-between ">
+                            <div>
+                                <div class="rating">
+                                ${star}
+                                </div>
+                                <p>${item.price}đ</p>
+                            </div>
+                            <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon" />
                         </div>
-                        <p>${item.price}đ</p>
+                        </a>
                 </div>`;
     }).join(" ");
 

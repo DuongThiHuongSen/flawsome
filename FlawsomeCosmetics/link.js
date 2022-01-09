@@ -1,25 +1,25 @@
-﻿<!DOCTYPE html>
-<html>
+import { allProduct } from './data.js';
+const url = new URL(window.location.href);
+const id = url.searchParams.get("id");
 
-<head>
-    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" />
-    <title></title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
-        type='text/css'>
-    <link rel="stylesheet" href="index.css">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
+const product = allProduct.find(p => p.id === Number(id));
+console.log(product);
 
-<body>
-    <div id="header"></div>
-    <div class="container single-product px-8" id="productDetail">
-        <div class="row py-8">
+window.addEventListener('DOMContentLoaded', () => {
+
+    let star = '';
+    for (let index = 0; index < 5; index++) {
+        if (index <= product.vote) {
+            star += `<i class="fa fa-star"></i> `;
+        } else {
+            star += `<i class="fa fa-star-o" aria-hidden="true"></i> `;
+        }
+    }
+
+    const sanPhamchiTiet = `<div class="row py-8">
             <div class="col-4">
                 <div class="large-image">
-                    <img src="Images/TrangChiTietSP/hình lớn.png" alt="" width="500" id="product-img">
+                    <img src="${product.image}" alt="" width="500" id="product-img">
                 </div>
 
                 <div class="small-img-row">
@@ -55,18 +55,14 @@
             </div>
             <div class="col-8">
                 <div class="pl-4">
-                    <p class="color-primary-bold font-bold text-3xl">SỮA RỬA MẶT TRÀ XANH INNISFREE</p>
+                    <p class="color-primary-bold font-bold text-3xl">${product.name}</p>
                     <p class="w-32 p-1 bg-green-primary  rounded-md mt-2"></p>
                     <div class="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star-o"></i>
+                        ${star}
                     </div>
                     <div class="py-2">
                         <p class="font-bold">Giá cũ: <label class="old-price pl-4" for="">480,000đ</label></p>
-                        <p class="font-bold">Giá mới: <label class="new-price pl-4" for="">480,000đ</label></p>
+                        <p class="font-bold">Giá mới: <label class="new-price pl-4" for="">${product.price}đ</label></p>
                     </div>
                     <div class="my-2 flex quantity-btn">
                         <div class="btn-item">-</div>
@@ -107,16 +103,9 @@
                     </div>
                 </div>
             </div>
-        </div>
+        </div>`;
 
-    </div>
-    <div class="px-8">
-        <p class="color-primary-bold font-bold text-3xl">Sản phẩm liên quan</p>
-        <p class="w-32 p-1 bg-green-primary  rounded-md mt-2"></p>
-    </div>
-    <div id="foot"></div>
-    <script type="module" src="./link.js"></script>
-    <script type="module" src="./index.js"></script>
-</body>
 
-</html>
+    $("#productDetail").html(sanPhamchiTiet);
+
+})
