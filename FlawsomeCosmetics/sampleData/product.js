@@ -71,7 +71,7 @@ export const products = [
         "descripton": '"Thâm mụn" luôn là vấn đề phiền toái khiến làn da chúng ta trở nên kém xinh, mất thẩm mỹ trong mắt người nhìn. Để làn da trở nên đều màu, mờ thâm thì chắc hẳn không thể bỏ qua Vitamin C - một trong những ứng cử viên sáng giá cải thiện làn da thâm mụn. Tinh Chất Làm Sáng Da Serum Klairs Freshly Juiced Drop chiết xuất từ vitamin C tinh khiết giúp phục hồi, làm sáng màu và trẻ hóa làn da mà không hề lo kích ứng da, kể cả da nhạy cảm.',
         "oldPrice": 340000, // giá cũ
         "vote": 3, // đánh giá sp mã = 5
-        "brand": 'Innesfree',
+        "brand": 'Innisfree',
         "categoryName": 'Chăm sóc da'
     },
     {
@@ -86,7 +86,7 @@ export const products = [
         "descripton": 'Tinh Chất Làm Sáng Da, Mờ Thâm Nám Melano CC Whitening Essence là tinh chất dưỡng da thuộc thương hiệu Melano CC sự kết hợp giữa Vitamin C tinh khiết và Vitamin E, thấm sâu vào lớp đáy da ngăn ngừa sự hình thành và làm mờ hắc tố melanin (tác nhân gây ra vết thâm nám, tàn nhang), từng bước làm da trắng sáng từ bên trong. Là 1 trong những sản phẩm bán chạy nhất của thương hiệu Melano CC (Nhật Bản).',
         "oldPrice": 480000, // giá cũ
         "vote": 5, // đánh giá sp mã = 5
-        "brand": 'Innesfree',
+        "brand": 'Innisfree',
         "categoryName": 'Chăm sóc da'
     },
     {

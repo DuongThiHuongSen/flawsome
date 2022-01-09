@@ -1,4 +1,5 @@
 import { products } from './sampleData/product.js';
+import { numberWithCommas } from './number.js';
 const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
 
@@ -101,7 +102,37 @@ window.addEventListener('DOMContentLoaded', () => {
             </div>
         </div>`;
 
+    let listSPLQ = products.filter(p => p.brand == product.brand || p.idCategory == product.idCategory && p.id != product.id);
+    if (listSPLQ.length > 4) {
+        listSPLQ = listSPLQ.slice(0, 4);
+    }
+    const SPlienQuan = listSPLQ.map((item, index) => {
+        let star = '';
+        for (let index = 0; index < 5; index++) {
+            if (index <= item.vote) {
+                star += `<i class="fa fa-star"></i> `;
+            } else {
+                star += `<i class="fa fa-star-o" aria-hidden="true"></i> `;
+            }
+        }
+        return `<div class="col-3 relative" >
+                    <a href="TrangChiTietSanPham.html?id=${item.id}">
+                        <img src='${item.image}' />
+                        <h4 class="py-2">
+                            ${item.name}
+                        </h4>
+                    </a>
+                    <div>
+                        <div class="py-2">${star}</div>
+                        <p class="py-1">${numberWithCommas(item.price)}đ</p>
+                    </div>
+                    <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon absolute top-28 right-2" />
+                    <img src='Images/svg/50/zoom.svg' class="pr-2 cart-icon absolute top-10 right-2" />
+                </div>`;
+    }).join(" ");
+
 
     $("#productDetail").html(sanPhamchiTiet);
+    $("#productLQ").html(SPlienQuan);
 
 })

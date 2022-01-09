@@ -2,10 +2,13 @@
 justify-content: flex-end;
 } 
 
-.product-item > img {
+.product-item > a > img {
  height: 200px;
   vertical-align: middle;
  
+}
+.product-item > a {
+    text-decoration: none;
 }
 .circle{
     border-radius: 50%; 
