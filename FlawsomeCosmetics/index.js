@@ -1,4 +1,6 @@
-import { data, newProduct, allProduct } from './data.js';
+import { data, newProduct, allProduct } from './sampleData/data.js';
+import { products } from './sampleData/product.js';
+
 
 // const $ = document.querySelector.bind(document);
 // const $$ = document.querySelectorAll.bind(document);
@@ -24,8 +26,8 @@ $.ajax({
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-
-    const sanPhamNoiBat = data.map((item, index) => {
+    const listSPNoiBat = products.filter(p => p.idCategory == 2);
+    const sanPhamNoiBat = listSPNoiBat.map((item, index) => {
         let star = '';
         for (let index = 0; index < 5; index++) {
             if (index <= item.vote) {

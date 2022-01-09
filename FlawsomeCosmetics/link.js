@@ -1,8 +1,8 @@
-import { allProduct } from './data.js';
+import { products } from './sampleData/product.js';
 const url = new URL(window.location.href);
 const id = url.searchParams.get("id");
 
-const product = allProduct.find(p => p.id === Number(id));
+const product = products.find(p => p.id === Number(id));
 console.log(product);
 
 window.addEventListener('DOMContentLoaded', () => {
@@ -29,7 +29,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="nav-item" role="presentation">
                             <button class="nav-link active" data-toggle="tab" data-target="" type="button">
                                 <span class="thumb">
-                                    <img src="Images/TrangChiTietSP/hình nhỏ 1.png" />
+                                    <img src="${product.image1}" />
                                 </span>
 
                             </button>
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="nav-item" role="presentation">
                             <button class="nav-link" data-toggle="tab" data-target="" type="button">
                                 <span class="thumb">
-                                    <img src="Images/TrangChiTietSP/hình nhỏ 2.png" />
+                                    <img src="${product.image2}" />
                                 </span>
 
                             </button>
@@ -45,7 +45,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="nav-item" role="presentation">
                             <button class="nav-link" data-toggle="tab" data-target="" type="button">
                                 <span class="thumb">
-                                    <img src="Images/TrangChiTietSP/hình nhỏ 3.png" />
+                                    <img src="${product.image3}" />
                                 </span>
 
                             </button>
@@ -61,7 +61,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         ${star}
                     </div>
                     <div class="py-2">
-                        <p class="font-bold">Giá cũ: <label class="old-price pl-4" for="">480,000đ</label></p>
+                        <p class="font-bold">Giá cũ: <label class="old-price pl-4" for="">${product.oldPrice}đ</label></p>
                         <p class="font-bold">Giá mới: <label class="new-price pl-4" for="">${product.price}đ</label></p>
                     </div>
                     <div class="my-2 flex quantity-btn">
@@ -72,17 +72,13 @@ window.addEventListener('DOMContentLoaded', () => {
 
                     <h1 class="color-primary-bold text-2xl font-bold py-2 ">Mô tả</h1>
                     <p class="color-primary-bold text-xl pr-8">
-                        Sữa Rửa Mặt Chiết Xuất Từ Trà Xanh Innisfree Green Tea Foam Cleanser
-                        là sữa rửa mặt trà xanh thuộc thương hiệu Innisfree, thích hợp cho da bị
-                        kích ứng với ô nhiễm môi trường, da có mụn nhưng không quá khẩn cấp (khẩn
-                        cấp và nhiều mụn khuyên dùng bộ Jeju Bija). Có khả năng làm sạch sâu, tái
-                        tạo mới làn da, làm sáng da, chống oxy hóa và ngăn ngừa mụn, viêm hiệu quả.
+                        ${product.descripton}
                     </p>
                     <div class="py-4">
                         <div class="flex py-2">
                             <img src="Images/svg/24/tick.svg" alt="">
                             <p class="font-bold pl-4 pr-1">Loại sản phẩm: </p>
-                            <p> Chăm sóc da mặt</p>
+                            <p> ${product.categoryName}</p>
                         </div>
                         <div class="flex py-2">
                             <img src="Images/svg/24/tick.svg" alt="">
@@ -92,7 +88,7 @@ window.addEventListener('DOMContentLoaded', () => {
                         <div class="flex py-2">
                             <img src="Images/svg/24/tick.svg" alt="">
                             <p class="font-bold pl-4 pr-1">Thương hiệu: </p>
-                            <p> Innisfree</p>
+                            <p> ${product.brand}</p>
                         </div>
 
                     </div>

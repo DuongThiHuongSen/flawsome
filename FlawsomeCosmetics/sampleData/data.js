@@ -107,27 +107,4 @@ export const allProduct = [
     },
 ]
 
-const dataModel = [
-    {
-        "id": 1,
-        "name": 'tên sản phẩm',
-        "idCategory": 0, // id danh mục
-        "image": 'ảnh lớn',
-        "image1": 'ảnh đính kèm 1',
-        "image2": 'ảnh đính kèm 2',
-        "image3": 'ảnh đính kèm 3',
-        "price": 2000, // giá sp
-        "descripton": 'Mô tả sản phẩm',
-        "oldPrice": 1500, // giá cũ
-        "vote": 4, // đánh giá sp mã = 5
-        "branch": 'thương hiệu',
-        "categoryName": 'loại sản phẩm'
-    }
-]
 
-const categories = [
-    {
-        "id": 1,
-        "name": 'tên danh mục'
-    }
-]
