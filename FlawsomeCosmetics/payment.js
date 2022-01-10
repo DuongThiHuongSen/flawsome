@@ -1,5 +1,33 @@
 import { numberWithCommas } from './number.js';
 
+var selected = 0;
+
+$('#confirm').click(() => {
+    var payments = document.getElementsByName('pay');
+
+    console.log(payments);
+    for (let index = 0; index < payments.length; index++) {
+        if (payments[index].checked) {
+            selected = Number(payments[index].value);
+        }
+    }
+    switch (selected) {
+        case 1:
+
+            break;
+        case 2:
+            window.location.href = 'TrangThanhToanATM1.html';
+            break;
+        case 3:
+            window.location.href = 'TrangThanhToanCreditCard.html';
+            break;
+
+        default:
+            break;
+    }
+})
+
+
 window.addEventListener('DOMContentLoaded', () => {
 
     const carts = JSON.parse(window.localStorage.getItem('cart'));

@@ -18,46 +18,36 @@
     <div class="container">
         <div class="row px-8 py-4">
             <div class="col-7 px-4">
-                <div class="flex justify-content-between" style="width: 90%;">
+                <div class="flex justify-content-between mb-8" style="width: 90%;">
                     <p class="color-primary-bold font-bold text-lg hover:underline no-underline">
                         <a class="color-primary-bold" href="TrangGioHang.html">Giỏ hàng</a>
                     </p>
+                    <p class="color-primary-bold font-bold text-lg hover:underline no-underline">
+                        <a class="color-primary-bold" href="ThongTinGiaoHang.html">Thông tin giao hàng</a>
+                    </p>
                     <div>
-                        <p class="color-primary-bold font-bold text-lg">Thông tin giao hàng</p>
+                        <p class="color-primary-bold font-bold text-lg">Phương thức thanh toán</p>
                         <p class="pt-1 rounded-md" style="background-color: #B8E866;"></p>
                     </div>
-                    <p class="color-primary-bold font-bold text-lg hover:underline no-underline">
-                        <a class="color-primary-bold" href="TrangPTTT.html">Phương thức thanh toán</a>
-                    </p>
                 </div>
 
-                <p class="color-primary font-bold">Địa chỉ nhận hàng</p>
-                <input type="text" placeholder="Họ tên người nhận" class="input-info">
-                <input type="text" placeholder="Số điện thoại" class="input-info">
-                <input type="text" placeholder="Địa chỉ nhận hàng" class="input-info">
-                <input type="text" placeholder="Tỉnh/Thành phố" class="input-info">
-                <div class="flex" style="width: 90%;">
-                    <input type="text" placeholder="Quận/ huyện" class="input-info">
-                    <p class="px-4"> </p>
-                    <input type="text" placeholder="Phường/ xã" class="input-info">
-                </div>
-                <p class="color-primary font-bold">Thời gian nhận hàng</p>
-                <input type="date" placeholder="Ngày giao hàng" class="input-info pr-4">
-                <p class="color-primary font-bold">Phương thức giao hàng</p>
-                <div class="input-info ">
-                    <input type="radio" value="Thanh toán khi giao hàng (COD)" name="cod" id="PaymentForm1">
-                    <label class="pl-4" for="PaymentForm1">Giao hàng nhanh
-                        <label class="pl-8 " for="PaymentForm1">20,000đ</label>
-                    </label>
-
+                <div class="input-info">
+                    <input checked type="radio" value="1" class="payMethod" name="pay" id="PaymentForm1">
+                    <label class="pl-4" for="PaymentForm1">Thanh toán khi giao hàng (COD)</label>
                 </div>
                 <div class="input-info">
-                    <input type="radio" value="Thanh toán bằng thẻ ATM" name="cod" id="PaymentForm2">
-                    <label class="pl-4" for="PaymentForm2">Giao hàng tiết kiệm
-                        <label class="pl-4" for="PaymentForm2">Miễn phí</label>
-                    </label>
+                    <input type="radio" value="2" name="pay" class="payMethod" id="PaymentForm2">
+                    <label class="pl-4" for="PaymentForm2">Thanh toán bằng thẻ ATM</label>
                 </div>
-
+                <div class="input-info">
+                    <input type="radio" value="3" name="pay" class="payMethod" id="PaymentForm3">
+                    <label class="pl-4" for="PaymentForm3">Thanh toán bằng Credit Card</label>
+                </div>
+                <div class="flex justify-content-end" style="width: 90%;">
+                    <div class="button-custom" id="confirm">
+                        <a class="text-white" href="#">Xác nhận</a>
+                    </div>
+                </div>
             </div>
 
             <div class="col-5 p-4 border border-zinc-700 rounded" style="background-color: #F0F7D4;">
