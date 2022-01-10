@@ -1,0 +1,101 @@
+.dashboard {
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#sidebar {
+    background-color: #F0F7D4;
+    width: 20%;
+    padding: 0 10px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+}
+
+.admin {
+    width: 80%;
+    background: #E5E5E5;
+    margin-left: 20%;
+}
+
+.cart-admin {
+    display: flex;
+    background-color: white;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 160px;
+}
+
+.cart-admin div h3 {
+    color: #4F693D;
+    font-weight: 700;
+    font-size: 34px;
+}
+
+.img-cart {
+    width: 50px;
+    height: 50px;
+    background-color: #F0F7D4;
+    border-radius: 50%;
+}
+
+.img-cart img {
+    padding: 12px;
+}
+
+.input-date {
+    margin: 30px 0;
+}
+
+.input-date input {
+    width: 300px;
+    outline: none;
+    color: black;
+    font-weight: bold;
+    padding-left: 20px;
+    border-radius: 10px;
+    border: 1px solid #4F693D
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background-color: #66B032;
+    padding: 10px;
+    font-size: 25px;
+}
+
+.card-product {
+    display: flex;
+    gap: 25px;
+}
+
+.card-product a {
+    border: 1px solid #4F693D;
+    background-color: #F0F7D4;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.card-product a img {
+    padding: 10px;
+}
+
+.card-product div p {
+    color: black;
+    font-weight: 700;
+}
+
+.card-product div span {
+    color: #66B032;
+}
+
+.statistical .selling-products {
+    background-color: white;
+    padding: 20px;
+}
+
+.statistical .selling-products h3 {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    padding: 20px 0;
+}

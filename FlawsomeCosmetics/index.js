@@ -7,19 +7,19 @@
 $.ajax({
     url: "./header/header.html",
     data: {
-        zipcode: 97201
+        zipcode: 97201,
     },
-    success: function (result) {
+    success: function(result) {
         $("#header").html(result);
-    }
+    },
 });
 
 $.ajax({
     url: "./footer/footer.html",
     data: {
-        zipcode: 97201
+        zipcode: 97201,
     },
-    success: function (result) {
+    success: function(result) {
         $("#foot").html(result);
-    }
+    },
 });
