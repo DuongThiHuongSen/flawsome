@@ -42,7 +42,8 @@ window.addCart = function (id) {
     }
 
     localStorage.setItem('cart', JSON.stringify(oldCart));
-
+    alert('Thêm sản phẩm vào giỏ hàng thành công!');
+    window.location.reload();
 }
 
 window.addEventListener('DOMContentLoaded', () => {

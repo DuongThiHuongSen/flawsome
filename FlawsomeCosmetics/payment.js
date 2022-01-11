@@ -35,7 +35,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const SP = Object.values(carts).map((item) => {
         return ` <div class="flex items-center w-full p-2">
                     <div class="rounded-lg bg-white border p-2" style="border-color: black;">
-                        <img src="Images/allProducts/01.png" alt="" style="width: 120px;">
+                        <img src="${item.image}" alt="" style="width: 120px;">
                     </div>
                     <div class="pl-4">
                         <p class="text-lg">${item.name}</p>
@@ -53,4 +53,14 @@ window.addEventListener('DOMContentLoaded', () => {
     $("#money").html(`${numberWithCommas(total)}đ`);
     $("#total").html(`${numberWithCommas(total + 20000)}đ`);
 
-})
+});
+
+var cards = document.getElementsByName('card');
+
+for (let index = 0; index < cards.length; index++) {
+    console.log('61', index);
+    const element = cards[index];
+    element.addEventListener('click', () => {
+        window.location.href = 'TrangThanhToanATM2.html';
+    })
+}
