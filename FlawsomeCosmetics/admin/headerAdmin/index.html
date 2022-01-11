@@ -1,0 +1,55 @@
+<div>
+  <div class="header-dashboard">
+    <div class="input-search flex">
+      <input type="text" name="" id="" placeholder="Tìm kiếm" />
+      <button>
+        <img
+          src="../Images/sidebar/iconSearch.svg"
+          width="30px "
+          height="30px"
+          alt=""
+          class="search"
+        />
+      </button>
+    </div>
+    <div class="flex">
+      <div class="noti">
+        <p>Flawsome</p>
+        <img class="notification" src="../Images/sidebar/noti.svg" alt="" />
+      </div>
+      <div>
+        <div class="profile">
+          <div class="text-profile">
+            <h5>Ngọc Anh</h5>
+            <a href="#">Tài khoản Admin</a>
+          </div>
+          <img
+            src="../Images/sidebar/profile.png"
+            class="img-profile"
+            alt=""
+            width="50px"
+            style="margin-left: 10px"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="profile-me d-flex justify-content-end">
+    <div class="info">
+      <div>
+        <h5>Ngọc Anh</h5>
+        <p>anhhtn19411c@st.uel.edu.vn</p>
+      </div>
+      <ul>
+        <li><a href="">Thông tin tài khoản</a></li>
+        <li><a href="">Đăng nhập tài khoản khác</a></li>
+        <li><a href="">Đăng xuất</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<script>
+  $(".text-profile a").click(() => {
+    $(".img-profile").style.display = "block";
+  });
+</script>
