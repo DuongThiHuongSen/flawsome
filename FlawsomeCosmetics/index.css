@@ -11,13 +11,15 @@
 @import url("CSS/StyleChiTietSP.css");
 @import url("CSS/StyleTrangGioHang.css");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap");
-@import url(./CSS/StyleDashboard.css);
-@import url(./CSS/StyleHeaderAdmin.css);
-@import url(./CSS/StyleSideBar.css);
-@import url(./CSS/StyleOrder.css);
-@import url(./CSS/StyleTransfer.css);
+@import url("CSS/StyleDashboard.css");
+@import url('CSS/StyleHeaderAdmin.css');
+@import url("CSS/StyleSideBar.css");
+@import url("CSS/StyleOrder.css");
+@import url("CSS/StyleTransfer.css");
 @import url("./CSS/StyleDetailTransfer.css");
 @import url("./CSS/StyleDetailOrder.css");
+@import url('CSS/StyleTrangGioHang.css');
+@import url('CSS/StyleLogin.css');
 body {
     font-family: "Montserrat", sans-serif;
 }
@@ -68,3 +70,4 @@ select {
     cursor: pointer;
     color: #C4C4C4;
 }
+

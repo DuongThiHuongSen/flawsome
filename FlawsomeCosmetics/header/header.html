@@ -1,19 +1,52 @@
 <div class=" flex flex-row w-full containerHeader">
-    <img src="Images/header/logo.png" class="logo mt-6" alt="loading...">
+    <img src="Images/header/logo.png" class="logo" alt="loading...">
     <div class="flex flex-row justify-between px-6 items-center w-full">
         <div class="grid grid-cols-5 main-menu justify-start items-center w-4/5">
             <div class="px-2 text-center"><a class="menuText" href="index.html">Trang chủ</a></div>
-            <div class="px-2 text-center flex flex-row">
-                <a class="menuText" href="TrangSanPham.html">Sản phẩm</a>
-                <img class="cursor-pointer pl-2" src="Images/svg/angle-down-solid.svg" alt="" style="height: 20px;">
+            <div class="px-2 text-center">
+                <!-- <a class="menuText" href="TrangSanPham.html">Sản phẩm</a> -->
+                <!-- <a class="menuText" href="TrangSanPham.htmlp">Sản phẩm</a> -->
+                <a class="menuText dropdown-toggle" href="TrangSanPham.html" data-bs-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">Sản phẩm</a>
+                <!-- <img class="cursor-pointer pl-2" src="Images/svg/angle-down-solid.svg" alt="" style="height: 20px;"> -->
+                <div class="dropdown-menu pb-0 mt-3" style="border: none; box-shadow: 0px 0px 40px rgb(29 58 83 / 15%);"
+                    data-bs-popper="none">
+                    <div class="row p-4 g-4" style="font-size: 24px;">
+                        <!-- Dropdown column item -->
+                        <div class="col-xl-6 ">
+                            <h6 class="mb-2">CHĂM SÓC DA</h6>
+                            <ul class="list-unstyled">
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Kem chống nắng</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Sữa rửa mặt</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Serum</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Toner</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Tẩy tế bào chết</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Mặt nạ dưỡng da</a> </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-xl-6 ">
+                            <h6 class="mb-2">CHĂM SÓC MÔI</h6>
+                            <ul class="list-unstyled">
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Son dưỡng</a> </li>
+                                <li> <a class="dropdown-item" href="TrangSanPham.html">Tẩy da chết môi</a> </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="px-2 text-center"><a class="menuText" href="TrangBlog.html">Blog</a></div>
             <div class="px-2 text-center"><a class="menuText" href="TrangGioiThieu.html">Giới thiệu</a></div>
             <div class="px-2 text-center"><a class="menuText" href="TrangLienHe.html">Liên hệ</a></div>
         </div>
         <div class="flex flex-row">
-            <a href="TrangGioHang.html">
+            <a href="TrangGioHang.html" class="position-relative ">
                 <img class="p-4 icon-header cursor-pointer" src="Images/svg/gioHang.svg" alt="">
+                <div style="width: 26px; height: 26px; line-height: 26px;"
+                    class=" text-white text-center rounded-full position-absolute bg-red-500 top-4 right-2"
+                    id="cardNumber">
+                    0
+                </div>
             </a>
             <img class="p-4 icon-header cursor-pointer" src="Images/svg/timKiem.svg" alt="">
             <a href="admin/index.html">
@@ -22,3 +55,14 @@
         </div>
     </div>
 </div>
+<script>
+    let oldCart = JSON.parse(window.localStorage.getItem('cart'));
+    var cardNumber = document.getElementById('cardNumber');
+    if (oldCart !== null && Object.values(oldCart).length > 0) {
+        console.log('62');
+        cardNumber.innerHTML = Object.values(oldCart).length;
+    } else {
+        console.log(oldCart);
+        cardNumber.setAttribute('style', 'display:none')
+    }
+</script>

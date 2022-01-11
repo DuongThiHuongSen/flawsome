@@ -9,7 +9,7 @@ $.ajax({
     data: {
         zipcode: 97201,
     },
-    success: function(result) {
+    success: function (result) {
         $("#header").html(result);
     },
 });
@@ -19,12 +19,12 @@ $.ajax({
     data: {
         zipcode: 97201,
     },
-    success: function(result) {
+    success: function (result) {
         $("#foot").html(result);
     },
 });
 
-window.addCart = function(id) {
+window.addCart = function (id) {
     const item = products.find((p) => p.id === Number(id));
 
     let oldCart = JSON.parse(window.localStorage.getItem("cart"));
@@ -37,11 +37,13 @@ window.addCart = function(id) {
         oldCart[id].number++;
     } else {
         console.log("không", id);
-        oldCart[id] = {...item, number: 1 };
+        oldCart[id] = { ...item, number: 1 };
     }
 
-    localStorage.setItem("cart", JSON.stringify(oldCart));
-};
+    localStorage.setItem('cart', JSON.stringify(oldCart));
+    alert('Thêm sản phẩm vào giỏ hàng thành công!');
+    window.location.reload();
+}
 
 window.addEventListener("DOMContentLoaded", () => {
     const listSPNoiBat = products.filter((p) => p.idCategory == 2);
@@ -67,9 +69,8 @@ window.addEventListener("DOMContentLoaded", () => {
                             <div class="rating">${star}</div>
                             <p>${numberWithCommas(item.price)}đ</p>
                         </div>
-                        <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon" onclick="addCart(${
-                          item.id
-                        })" />
+                        <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon" onclick="addCart(${item.id
+                })" />
                     </div>
                 </div>`;
         })
@@ -99,9 +100,8 @@ window.addEventListener("DOMContentLoaded", () => {
                             <div class="rating">${star}</div>
                             <p>${numberWithCommas(item.price)}đ</p>
                         </div>
-                        <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon" onclick="addCart(${
-                          item.id
-                        })" />
+                        <img src='Images/svg/50/cart.svg' class="pr-2 cart-icon" onclick="addCart(${item.id
+                })" />
                     </div>
                 </div>`;
         })
@@ -122,19 +122,17 @@ window.addEventListener("DOMContentLoaded", () => {
                         <img class="" src='${item.image}' />
                         <div class="self-end ">
                             <div class="px-4 py-2">
-                                <p class="pt-2 pb-1 text-black font-bold text-lg">${
-                                  item.name
-                                }</p>
+                                <p class="pt-2 pb-1 text-black font-bold text-lg">${item.name
+                }</p>
                                 <div class="flex justify-content-between" >
                                     <div>
                                         <div class="rating">${star}</div>
                                         <p class="text-black">${numberWithCommas(
-                                          item.price
-                                        )}đ</p>
+                    item.price
+                )}đ</p>
                                     </div>
-                                    <img src='Images/svg/50/cart.svg' class="pr-4 cart-icon" onclick="addCart(${
-                                      item.id
-                                    })" />
+                                    <img src='Images/svg/50/cart.svg' class="pr-4 cart-icon" onclick="addCart(${item.id
+                })" />
                                 </div>
                             </div>
                         </div>
