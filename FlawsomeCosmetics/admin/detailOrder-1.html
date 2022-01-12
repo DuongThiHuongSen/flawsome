@@ -7,8 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="../index.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet" type="text/css" />
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"
+        type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -28,12 +30,7 @@
                             <p class="px-2 text-white font-bold">In</p>
                         </div>
                     </div>
-                    <div class="
-                order-detail-content
-                border-t-[1px]
-                mx-[20px]
-                border-[#C4C4C4]
-              ">
+                    <div class="order-detail-content border-t-[1px] mx-[20px] border-[#C4C4C4]">
                         <div class="flex my-[30px] gap-1">
                             <div class="col-xl-4 bg-white p-[10px] rounded-[10px]">
                                 <div class="card-order-detail">
@@ -51,7 +48,7 @@
                                             <p class="font-bold">#100021</p>
                                             <p class="font-bold">12/12/2021, 4:43PM</p>
                                             <div class="flex gap-4">
-                                                <p class="font-bold text-[#66B032]">Hoàn thành</p>
+                                                <p class="font-bold text-black">Đơn hàng mới</p>
                                                 <img src="../Images/detailOrder/pen.svg" alt="" />
                                             </div>
                                         </div>
@@ -164,13 +161,7 @@
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="
-                    flex
-                    justify-around
-                    py-[60px]
-                    bg-white
-                    border-t-[1px] border-[#66B032]
-                  ">
+                            <div class="flex justify-around py-[60px] bg-white border-t-[1px] border-[#66B032]">
                                 <div>
                                     <p class="py-2">Tổng tiền hàng</p>
                                     <p class="py-2">Phí vận chuyển</p>
@@ -191,9 +182,82 @@
                                 </div>
                             </div>
                             <div class="bg-white p-[20px]">
-                                <button class="bg-[#66B032] text-white p-2">
+                                <button type="button" class="bg-[#66B032] text-white p-2 " data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">
                                     Giao hàng
-                  </button>
+                                </button>
+
+                                <!-- Modal -->
+                                <div class="modal fade" id="exampleModal" tabindex="-1"
+                                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title font-bold" id="exampleModalLabel">Giao hàng</h5>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div>
+                                                    <p class="font-bold py-2">Kho xuất hàng</p>
+                                                    <div class="select">
+                                                        <select name="" id=""
+                                                            class="border border-[#C4C4C4] h-[40px] px-2">
+                                                            <option value=""></option>
+                                                            <option value="">Xóa những sản phẩm đã chọn</option>
+                                                            <option value="">Thêm sản phẩm vào nhóm sản phẩm</option>
+                                                            <option value="">Xóa sản phẩm từ nhóm sản phẩm</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-bold py-2">Địa chỉ lấy hàng</p>
+                                                    <div class="select">
+                                                        <select name="" id=""
+                                                            class="border border-[#C4C4C4] h-[40px] px-2">
+                                                            <option value=""></option>
+                                                            <option value="">Xóa những sản phẩm đã chọn</option>
+                                                            <option value="">Thêm sản phẩm vào nhóm sản phẩm</option>
+                                                            <option value="">Xóa sản phẩm từ nhóm sản phẩm</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-bold py-2">Giao hàng bằng</p>
+                                                    <div class="select">
+                                                        <select name="" id=""
+                                                            class="border border-[#C4C4C4] h-[40px] px-2">
+                                                            <option value=""></option>
+                                                            <option value="">Xóa những sản phẩm đã chọn</option>
+                                                            <option value="">Thêm sản phẩm vào nhóm sản phẩm</option>
+                                                            <option value="">Xóa sản phẩm từ nhóm sản phẩm</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                <div>
+                                                    <p class="font-bold pt-2">Khối lượng</p>
+                                                    <input type="text" placeholder="Kg" class="input-info">
+                                                </div>
+                                                <div class="flex items-center jusstify-content-between">
+                                                    <div>
+                                                        <p class="font-bold pt-2">Chiều dài gói hàng</p>
+                                                        <input type="text" placeholder="cm" class="input-info">
+                                                    </div>
+                                                    <div>
+                                                        <p class="font-bold pt-2">Chiều rộng gói hàng</p>
+                                                        <input type="text" placeholder="cm" class="input-info">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <div type="button"
+                                                    class="text-white bg-gray-300 py-2 px-4 rounded-md hover:bg-gray-400"
+                                                    data-bs-dismiss="modal">Close</div>
+                                                <div class="button-custom" data-bs-dismiss="modal">Save changes</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="col-xl-4">
@@ -280,6 +344,10 @@
             </div>
         </div>
 
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+        </script>
         <script src="./index.js "></script>
 </body>
 

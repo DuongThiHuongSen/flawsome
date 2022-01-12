@@ -35,6 +35,9 @@
 .menu-1 li.active {
     background: #66B032;
 }
+.menu-1 li:hover {
+    background: #66B032;
+}
 
 .menu-1 li.active a {
     color: white;

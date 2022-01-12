@@ -68,7 +68,7 @@
   box-shadow: 5px 10px 10px rgb(238, 236, 236);
   background-color: white;
   padding: 50px;
-  display: none;
+  /* display: none; */
 }
 
 .header-dashboard .profile .text-profile a:hover .info {

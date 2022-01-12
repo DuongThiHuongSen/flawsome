@@ -1,11 +1,11 @@
 <div>
     <div class="logo">
-        <a href="#">
+        <a href="../index.html">
             <img src="../Images/header/logo.png" alt="" width="220px" height="220px" />
         </a>
     </div>
-    <ul class="menu-1">
-        <li class="active">
+    <ul class="menu-1 mt-8">
+        <li>
             <a class="flex items-center justify-between" href="./index.html">
                 <img src="../Images/sidebar/icon1.svg" alt="" /> Trang chủ
                 <div></div>
@@ -28,23 +28,15 @@
                 <img class="icon1" src="../Images/sidebar/icon8.svg" alt="" /></a>
         </li>
         <li>
-            <a href="./blog.html" class="flex items-center justify-between"><img class="icon" src="../Images/sidebar/icon5.svg" alt="" />Blog
-                <img class="icon1" src="../Images/sidebar/icon8.svg" alt="" /></a>
-        </li>
-        <li>
-            <a href="#" class="flex items-center justify-between"><img src="../Images/sidebar/icon6.svg" alt="" />Khuyến mãi
-                <div></div>
-            </a>
-        </li>
-        <li class="">
-            <a href="#" class="flex items-center justify-between"><img class="icon" src="../Images/sidebar/icon7.svg" alt="" />Giao diện
+            <a href="./blog.html" class="flex items-center justify-between"><img class="icon"
+                    src="../Images/sidebar/icon5.svg" alt="" />Blog
                 <img class="icon1" src="../Images/sidebar/icon8.svg" alt="" /></a>
         </li>
     </ul>
 </div>
 
 <script>
-    $("li").click(function() {
+    $("li").click(function () {
         $(this).addClass("active").siblings().removeClass("active");
     });
 </script>
